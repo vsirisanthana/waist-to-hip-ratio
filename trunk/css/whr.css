@@ -1,0 +1,68 @@
+.a {
+    width: 100px;
+    background-color: red;
+}
+
+.b {
+    width: 100px;
+    background-color: blue;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 30px;
+    background-color: #f3f1ff;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 16px;
+}
+
+.label {
+    float: left;
+    width: 500px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.unit {
+    padding-left: 10px;
+}
+
+.error {
+    padding-left: 10px;
+    color: red;
+}
+
+.result {
+    color: red;
+    font-weight: bold;
+}
+
+.text_input {
+    width: 120px;
+}
+
+.footer {
+	font-size: 11px;
+	line-height: 15px;
+}
+
+.superscript {
+    vertical-align: super;
+}
+
+.date{
+    margin-right: 4px;
+}
+
+.text_input[readonly] {
+    color: black;
+    background-color: #E6E6E6;
+}
+
+.text_input[readonly="readonly"]{
+    color: black;
+    background-color: #E6E6E6;
+}
