@@ -15,9 +15,9 @@ body {
     font-size: 12px;
 }
 
-h1 {
-    font-size: 16px;
-}
+/*h1 {*/
+    /*font-size: 16px;*/
+/*}*/
 
 .label {
     float: left;
@@ -50,6 +50,7 @@ h1 {
 }
 
 .superscript {
+    font-size: 11px;
     vertical-align: super;
 }
 
@@ -65,4 +66,32 @@ h1 {
 .text_input[readonly="readonly"]{
     color: black;
     background-color: #E6E6E6;
+}
+
+#intro {
+    text-align: center;
+}
+
+#nutritional-status {
+    background-color: #aaaaaa;
+    margin-bottom: 20px;
+}
+
+#waist-to-hip-ratio {
+    background-color: #add8e6;
+}
+
+.panel {
+    padding: 10px 20px 20px;
+    border-radius: 10px;
+}
+
+.blue {
+    color: blue;
+}
+
+.content {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
