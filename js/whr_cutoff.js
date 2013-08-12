@@ -230,4 +230,4 @@ var whr_cutoff = [
         "female-overweight": "25.00", 
         "male-obesity": "30.00"
     }
-]
+];

@@ -69,8 +69,8 @@ $(document).ready(function() {
         showOn: "button",
         buttonImage: "css/smoothness/images/calendar.gif",
         buttonImageOnly: true,
-        minDate: '-15y',
-        yearRange: 'c-15:c+15'
+        minDate: '-18y',
+        yearRange: 'c-18:c+18'
     });
     $examinationdate
         .val( days[TODAY.getDate()-1] + ' ' + months[TODAY.getMonth()] + ' ' + TODAY.getFullYear())

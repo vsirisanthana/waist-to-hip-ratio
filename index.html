@@ -29,44 +29,49 @@
     </style>
     </head>
 <body>
-        <h1 id="intro" class="title">How to calculate ...........</h1>
-        <ul>
-          <li>
-            <h1 class="title">Age- and sex-adjusted Z scores based on normal ranges among healthy Thai children (aged 6-15 years)<sup>1</sup></h1>
-          </li>
-          <li>
-            <h1 class="title"><span class="title">Body mass index (aged 2 -18 years). OVERWEIGHT and OBESITY are by Cole, TL. et al<sup>2</sup> definitions.</span> </h1>
-          </li>
-        </ul>
-        <div id="calculator">                
-	    <div id="birthdate_label" class="label">Birth Date</div><input id="birthdate" type="text" class="date text_input" /><span id="birthdate_error" class="error"></span><br/>
-            <div id="examination_label" class="label">Examination Date</div><input id="examinationdate" type="text" class="date text_input" /><span id="examinationdate_error" class="error"></span><br/>
-            <div id="sex_label" class="label">Sex</div><input id="male" name="sex" type="radio" value="boys" checked >Male</input><input id="female" name="sex" type="radio" value="girls" >Female</input><br/>
-            <div id="age_label" class="label">Age</div><input id="age" type="text" class="text_input" readonly /><span id="age_unit" class="unit">years</span><span id="age_error" class="error"></span><br/>
-            <div id="weight_label" class="label">Weight</div><div><input id="weight" type="text" class="text_input" /><span id="weight_unit" class="unit">kg</span><span id="weight_error" class="error"></span><br/>
-            <div id="height_label" class="label">Height</div><input id="height" type="text" class="text_input" /><span id="height_unit" class="unit">cm</span><span id="height_error" class="error"></span><br/>
-            <div id="bmi_label" class="label">BMI</div><input id="bmi" type="text" class="text_input" readonly /><span id="bmi_unit" class="unit">kg/m<sup>2</sup></span><br/>
-            <div id="nutrional_label" class="label">Nutrional Status (using BMI by Cole TJ et al.'s definition<sup>2</sup>)</div><br/>
-            <div style="clear:both;"></div>
-            <div id="overweight_label" class="label">Overweight</div><input id="overweight" type="text" class="text_input" readonly /><span id="overweight_unit" class="unit">kg/m<sup>2</sup></span><br/>
-            <div id="obesity_label" class="label">Obesity</div><input id="obesity" type="text" class="text_input" readonly /><span id="obesity_unit" class="unit">kg/m<sup>2</sup></span><br/>
-            <div id="nutrionalstatus_label" class="label result">This child is</div><input id="nutrionalstatus" type="text" class="text_input" readonly /><br/>
-            <div id="waist_label" class="label">Waist Circumference<sup>3</sup></div><input id="waist" type="text" class="text_input" /><span id="waist_unit" class="unit">cm</span><span id="waist_error" class="error"></span><br/>
-            <div style="clear:both;"></div>
-            <div id="hip_label" class="label">Hip Circumference<sup>4</sup></div><input id="hip" type="text" class="text_input" /><span id="hip_unit" class="unit">cm</span><span id="hip_error" class="error"></span><br/>
-            <div style="clear:both;"></div>
-            <div id="whr_label" class="label">Waist-to-Hip Ratio (WHR)</div><input id="whr" type="text" class="text_input" readonly /><br/><div style="clear:both;"></div>
-            <div id="meanwhr_label" class="label">Mean of WHR of healthy <span class="selected_sex">boys</span> age</div><input id="meanwhr" type="text" class="text_input" readonly /><br/>
-            <div id="sdwhr_label" class="label">S.D. of WHR of healthy <span class="selected_sex">boys</span> age</div><input id="sdwhr" type="text" class="text_input" readonly /><br/>
-            <div id="zscorewhr_label" class="label result">WHR z score of this child is</div><input id="zscorewhr" type="text" class="text_input" readonly /><br/>
-            <div class="label">&nbsp;</div><input id="reset_button" type="button" value="Reset"/>
-        </div>
-        <div id="note" class="footer">
-	    <span class="med">NOTE</span>:<br/>
-            <sup>1</sup> Working group on using weight and height references in evaluating the growth status of Thai children. Manual on using weight and height references in evaluating growth status of Thai children. Bangkok: Department of Health, Ministry of Public Health, 2000.<br/>
-            <sup>2</sup> Cole TJ, Bellizzi MC, Flegal KM, Dietz WH. Establishing a standard  definition for child overweight and obesity worldwide: international survey. BMJ 2000;320(7244):1240-3<br/>
-            <sup>3</sup> Mid-waist circumference was measured at the level of the umbilicus after exhalation.<br/>
-            <sup>4</sup> Maximum hip circumference was measured at the widest lateral hip diameter, across the maximal protuberance of the buttocks, and perpendicular to the cranial-caudal axis of the body.<br/>
-    </div>
-    </body>
+  <div class="content">
+    <h1 id="intro" class="title">How to calculate ...........</h1>
+
+    <!-- Body mass index -->
+    <div id="nutritional-status" class="panel">
+      <h2>Body mass index (aged 2 -18 years)<sup>1,2</sup></h2>
+      <div id="birthdate_label" class="label">Birth Date</div><input id="birthdate" type="text" class="date text_input" /><span id="birthdate_error" class="error"></span><br/>
+      <div id="examination_label" class="label">Examination Date</div><input id="examinationdate" type="text" class="date text_input" /><span id="examinationdate_error" class="error"></span><br/>
+      <div id="sex_label" class="label">Sex</div><input id="male" name="sex" type="radio" value="boys" checked >Male</input><input id="female" name="sex" type="radio" value="girls" >Female</input><br/>
+      <div id="age_label" class="label">Age</div><input id="age" type="text" class="text_input" readonly /><span id="age_unit" class="unit">years</span><span id="age_error" class="error"></span><br/>
+      <div id="weight_label" class="label">Weight</div><input id="weight" type="text" class="text_input" /><span id="weight_unit" class="unit">kg</span><span id="weight_error" class="error"></span><br/>
+      <div id="height_label" class="label">Height</div><input id="height" type="text" class="text_input" /><span id="height_unit" class="unit">cm</span><span id="height_error" class="error"></span><br/>
+      <div id="bmi_label" class="label">BMI</div><input id="bmi" type="text" class="text_input" readonly /><span id="bmi_unit" class="unit">kg/m<sup>2</sup></span><br/>
+      <div id="nutrional_label" class="label">Nutrional Status (using BMI by Cole TJ et al.'s definition<sup>2</sup>)</div><br/>
+      <div style="clear:both;"></div>
+      <div id="overweight_label" class="label">Overweight</div><input id="overweight" type="text" class="text_input" readonly /><span id="overweight_unit" class="unit">kg/m<sup>2</sup></span><br/>
+      <div id="obesity_label" class="label">Obesity</div><input id="obesity" type="text" class="text_input" readonly /><span id="obesity_unit" class="unit">kg/m<sup>2</sup></span><br/>
+      <div id="nutrionalstatus_label" class="label result">This child is</div><input id="nutrionalstatus" type="text" class="text_input" readonly /><br/>
+      <div class="footer">
+        <sup>1</sup> Working group on using weight and height references in evaluating the growth status of Thai children. Manual on using weight and height references in evaluating growth status of Thai children. Bangkok: Department of Health, Ministry of Public Health, 2000.<br/>
+        <sup>2</sup> Cole TJ, Bellizzi MC, Flegal KM, Dietz WH. Establishing a standard  definition for child overweight and obesity worldwide: international survey. BMJ 2000;320(7244):1240-3<br/>
+      </div>
+    </div><!-- end Body mass index -->
+
+    <!-- WHR -->
+    <div id="waist-to-hip-ratio" class="panel">
+      <h2>Age- and sex-adjusted Z scores based on normal ranges among healthy Thai children (aged 6-15 years)<sup>3,4,5</sup></h2>
+      <div id="waist_label" class="label">Waist Circumference<sup>3</sup></div><input id="waist" type="text" class="text_input" /><span id="waist_unit" class="unit">cm</span><span id="waist_error" class="error"></span><br/>
+      <div style="clear:both;"></div>
+      <div id="hip_label" class="label">Hip Circumference<sup>4</sup></div><input id="hip" type="text" class="text_input" /><span id="hip_unit" class="unit">cm</span><span id="hip_error" class="error"></span><br/>
+      <div style="clear:both;"></div>
+      <div id="whr_label" class="label">Waist-to-Hip Ratio (WHR)</div><input id="whr" type="text" class="text_input" readonly /><br/><div style="clear:both;"></div>
+      <div id="meanwhr_label" class="label">Mean of WHR of healthy <span class="selected_sex">boys</span> age</div><input id="meanwhr" type="text" class="text_input" readonly /><br/>
+      <div id="sdwhr_label" class="label">S.D. of WHR of healthy <span class="selected_sex">boys</span> age</div><input id="sdwhr" type="text" class="text_input" readonly /><br/>
+      <div id="zscorewhr_label" class="label result">WHR z score of this child is</div><input id="zscorewhr" type="text" class="text_input" readonly /><br/>
+      <div class="label">&nbsp;</div><input id="reset_button" type="button" value="Reset"/>
+      <div class="footer">
+        <sup>3</sup> Mid-waist circumference was measured at the level of the umbilicus after exhalation.<br/>
+        <sup>4</sup> Maximum hip circumference was measured at the widest lateral hip diameter, across the maximal protuberance of the buttocks, and perpendicular to the cranial-caudal axis of the body.<br/>
+        <span class="blue"><sup>5</sup> Pruenglampoo S, Taejaroenkul S, Sirisanthana V. Relationships between waist-to-hip circumference ratio and gender, age and nutritional status in Thai children in Mueang District, Chiang Mai Province. Chiang Mai Med J 2012;51(2):29-37.<br/></span>
+      </div>
+    </div><!-- end WHR -->
+
+  </div>
+</body>
 </html>
